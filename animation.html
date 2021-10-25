@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>beach ball animation</title>
+	
+
+	<style>
+		
+		body{
+			margin:0px;
+		}
+		#beach{
+			width:1500px;
+			height:800px;
+			background-size:cover;
+			background-image:url(beach2.jpg);
+			position:relative;
+		}
+
+
+		#ball1{
+			width:150px;
+			height:150px;
+			background-image:url(ball1.png);
+			background-size: cover;
+			position:relative;
+			animation-name:ballanimation;
+			animation-duration:2s;
+			animation-iteration-count:infinite;
+		}
+
+		@keyframes ballanimation{
+			0%{
+				top:0px;
+			}
+			50%{
+				top:650px;
+			}
+			100%{
+				top:0px;
+			}
+		}
+
+	</style>
+
+
+</head>
+<body>
+<div id="beach">
+<div id="ball1"></div>
+</div>
+
+
+</body>
+</html>
