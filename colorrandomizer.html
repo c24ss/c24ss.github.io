@@ -2,22 +2,53 @@
 <html>
 <head>
 	<title></title>
+
+	<style type="text/css">
+		.hearts{
+			height: 100px;
+			width: 100px;
+			background-image:url(heart.png);
+			background-size:contain;
+			position: relative;
+			display:inline-block;
+		}
+
+		
+	</style>
 </head>
 <body>
 <script type="text/javascript">
-	function makeCircle (){
-var x = Math.round (Math.random()*255);
-var y = Math.round (Math.random()*255);
-var x = Math.round (Math.random()*255);
 
-	
+function makeHeart (){
 
-var circle = document.createElement('div');
-document.body.appendChild(circle);
-circle.classList.add('circles');
-circle.style.backgroundColor = "rgb(" + x +"" + y +"" + z +")"; 
+
+	var x = Math.round(Math.random()*20*255);
+
+	if (x < 150) { x = x +100}
+
+
+	var y = Math.round(Math.random()*0);
+
+	var z = Math.round(Math.random()*255);
+
+		if (z < 100) { x = x +50}
+		if (z>x) {z = z-50}
+
+		if ( x-z < 50) {x =x+100}
+
+
+		console.log(x,y,z)
+
+	var heart = document.createElement('div');
+	document.body.appendChild(heart);
+
+	heart.classList.add('hearts');
+	heart.style.backgroundColor = "rgb(" + x +"," + y +"," + z +")"; 
+
+	// circle.innerText = x + " " + y+ " " + z  
 }
 
+setInterval(makeHeart, 500)
 </script>
 </body>
 </html>
