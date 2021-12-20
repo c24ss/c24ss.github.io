@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+	#background {
+		background-image: url(table.jpg);
+		background-size: cover;
+		margin: 0px;
+		width: 100%;
+		height: 702px;
+		top: 0px;
+		left: 0px;
+	}
+
+	#ball {
+		background-image: url(soccerball.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 80px;
+		height: 80px;
+		top: 300px;
+		left: 380px;
+		animation-duration: 1s;
+		transition: 1s;
+		transition-timing-function: ease-in-out; 
+		animation-iteration-count: 1;
+		z-index: 10;
+	}
+
+	#avery1{
+		background-image: url(avery1.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 350px;
+		height: 350px;
+		top: 300px;
+		left: 300px;
+		opacity: 0;
+	}
+
+	#avery3{
+		background-image: url(avery3.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 350px;
+		height: 350px;
+		top: 300px;
+		left: 300px;
+		opacity: 1;		
+	}
+
+	#sophia1{
+		background-image: url(sophia1.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 340px;
+		height: 340px;
+		top: 280px;
+		left: 760px;
+		opacity: 0;		
+	}
+
+	#sophia2{
+		background-image: url(sophia2.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 300px;
+		height: 300px;
+		top: 300px;
+		left: 800px;
+		opacity: 1;		
+	}
+
+	#turkey {
+		background-image: url(turkey.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		top: 400px;
+		left: 540px;
+	}
+@keyframes spin{
+	0% {
+		top: 300px;
+		left: 380px;
+		transform:rotate(350deg)
+	}
+	50% {
+		top: 300px;
+		left: 790px;
+	}
+	100% {
+		top: 300px;
+		left: 380px;
+		transform:rotate(350deg)
+	}	
+}
+
+body {margin: 0px;}
+
+</style>
+
+</head>
+<body>
+
+<div id="background">
+	<div id="ball"></div>
+	<div id="avery1"></div>
+	<div id="avery3"></div>
+	<div id="sophia1"></div>
+	<div id="sophia2"></div>
+	<div id="turkey"></div>
+</div>
+
+<script type="text/javascript">
+
+	var avery1 = document.getElementById('avery1');
+
+
+			var avery3 = document.getElementById('avery3');
+			
+			var sophia1 = document.getElementById('sophia1');
+
+			var sophia2 = document.getElementById('sophia2');
+
+	var ball = document.getElementById("ball");
+
+	function removeAnimationName () {
+		ball.style.animationName = "";
+		console.log("animation name removed")
+
+		}
+
+		function SophiaChangeBack () {
+				sophia1.style.opacity = '0';
+				sophia2.style.opacity = '1';
+				console.log("changed!")
+			}
+
+			function SophiaChange(){
+			sophia1.style.opacity ='1';
+			sophia2.style.opacity = '0';
+	
+			}
+
+
+	function AveryChange () {
+				avery1.style.opacity = '0';
+				avery3.style.opacity = '1';
+				console.log("changed!")}
+
+
+
+
+	ball.addEventListener("click", function(){
+			console.log('test');
+			ball.style.animationName = "spin";
+
+			avery1.style.opacity ='1';
+			avery3.style.opacity = '0';
+
+			setTimeout(SophiaChange, 343)
+
+			setTimeout(removeAnimationName, 1000);
+
+			setTimeout(AveryChange, 500);
+
+			setTimeout(SophiaChangeBack, 800);
+
+		})
+
+
+</script>
+
+</body>
+</html>
