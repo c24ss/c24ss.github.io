@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	
+	#box{
+		width:200px;
+		height:125px;
+		border:1px solid black;
+		font-size:100px;
+		text-align:center;
+		top:200px;
+		position: relative;
+
+	}
+	#text{
+		font-family:URW Chancery L, cursive;
+		font-size:20pt;
+		top:25px;
+		position:relative;
+	}
+
+	#background{
+		width:1500px;
+		height:1000px;
+		background-image:url(emojibackground.png);
+		background-size:cover;
+		background-position: center;
+		position: relative;
+
+	}
+</style>
+</head>
+<body>
+
+<div id="background">
+	
+<center> <div id="box">	</div> 
+<div id="text">your spirit emoji of the day!</div></center>
+
+</div>
+
+
+
+
+<script type="text/javascript">
+	
+	var box = document.getElementById("box")
+	var array = ["🥳", "🙁", "🤥","😁", "😱","😓","🤑","🤓","🤤","🤬","🧍‍","🤫","🤯","😨","🤠","🤐","😑","🥱"];
+	
+	box.addEventListener("click", function(){
+			var random = Math.round(Math.random()*17)
+
+		box.innerText = array[random]
+})
+
+
+</script>
+</body>
+</html>

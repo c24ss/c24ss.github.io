@@ -9,14 +9,14 @@
 			height:700px;
 			background-image: url(IMG_1448.png);
 			background-size: cover;
+		}
 
+		#text{
+			/*font: Times New Roman;
+			font-size: 20;
+			color: blue;*/
 
 		}
-	#red{
-			width: 500px;
-			height:700px;
-			background-color: red;
-			background-size: cover;
 
 	</style>
 </head>
@@ -25,14 +25,28 @@
 <audio id="song" src="JamesArthur.mp3"></audio>
 <center>
 	<div id="picture"></div>
-	<div id="red"></div>
+
 </center>
 
 
 
 
 <script type="text/javascript">
-	var picture = document.getElementbyId()
+
+	var text = document.getElementById("text");
+
+	var message = ["i love aves", "AVERYISLOVE"]
+
+picture.addEventListener("click", function(){
+var x = Math.round(Math.random()*1)
+console.log(x);
+console.log(message[x]);
+
+// text.innerText = message[x];
+// text.style.opacity = 1;
+
+
+})
 
 
 </script>
