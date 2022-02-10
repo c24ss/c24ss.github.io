@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		.heart{
+
+			background-image:url(heart.png);
+			height:80px;
+			width:100px;
+			background-size:contain;
+			position:relative;
+			display:inline-block;
+			color: white;
+			font-size: 50px;
+			text-align:center;
+			padding-top:20px;
+			background-repeat: no-repeat;
+
+
+		}
+		#v{
+			
+
+			background-color:red;
+			
+			/*padding-top:;*/
+		}
+		#a{
+		
+			background-color: pink;
+				
+		} 
+
+		#l{
+		
+			background-color: red;
+				
+		}
+
+		#e{
+			background-color: pink;
+			
+		}
+
+		#n{
+			
+			background-color: red;
+			
+			}
+		#t{
+			
+			background-color: pink;
+			}
+
+		#i{
+			
+			background-color: red;
+			
+		}
+
+		#n2{
+			
+			background-color: pink;
+			
+		}
+
+		#e2{
+			
+			background-color: red;
+			
+			font-size: 50px;
+		}
+		#s{
+			
+			background-color: red;
+			
+		}
+		
+
+
+		#container{
+			top:250px;
+			position: relative;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<center>
+<div id="container">
+<div class="heart" id="v">
+	V
+</div>
+<div class="heart" id="a">
+	A
+</div>
+<div class="heart" id="l">
+	L
+</div>
+<div class="heart" id="e">
+	E
+</div>
+<div class="heart" id="n">
+	N
+</div>
+<div class="heart" id="t">
+	T
+</div>
+<div class="heart" id="i">
+	I
+</div>
+<div class="heart" id="n2">
+	N
+</div>
+<div class="heart" id="e2">
+	E
+</div>
+<div class="heart" id="s">
+	S
+</div>
+
+</div>
+</center>
+
+<audio id="lovestory"></audio>
+<audio id="iwillalwaysloveyou"></audio>
+<audio id="lovelies"></audio>
+<audio id="doowop"></audio>
+<audio id="lovegalore"></audio>
+<audio id="dyingforyourlove"></audio>
+<audio id="likeiwantyou"></audio>
+<audio id="bestpart"></audio>
+<audio id="getyou"></audio>
+<audio id="loveagain"></audio>
+<audio id="song"></audio>
+
+
+<script type="text/javascript">
+	var v = document.getElementById('v');
+	var a = document.getElementById('a');
+	var l = document.getElementById('l');
+	var e = document.getElementById('e');
+	var n = document.getElementById('n');
+	var t = document.getElementById('t');
+	var i = document.getElementById('i');
+	var n2 = document.getElementById('n2');
+	var e2 = document.getElementById('e2');
+	var s = document.getElementById('s');
+	var song = document.getElementById("song");
+	var lovestory = ["lovestory.mp3"];
+	var iwillalwaysloveyou = ["iwillalwaysloveyou.mp3"];
+	var lovelies = ["lovelies.mp3"]
+	var doowop = ["doowop.mp3"];
+	var lovegalore = ["lovegalore.mp3"];
+	var dyingforyourlove = ["dyingforyourlove.mp3"];
+	var likeiwantyou = ["likeiwantyou.mp3"];
+	var bestpart = ["bestpart.mp3"];
+	var getyou = ["getyou.mp3"];
+	var loveagain = ["loveagain.mp3"];
+
+	v.addEventListener("click",function(){
+		song.src = lovestory
+		song.play()
+
+	})
+
+	a.addEventListener("click",function(){
+		song.src = iwillalwaysloveyou
+		song.play()
+	})
+
+	l.addEventListener("click",function(){
+		song.src = bestpart
+		song.play()})
+
+	e.addEventListener("click",function(){
+		song.src = getyou
+		song.play()
+		})
+	
+	n.addEventListener("click",function(){
+		song.src = doowop
+		song.play()})
+
+	t.addEventListener("click", function(){	
+		song.src = lovelies
+		song.play()})
+	i.addEventListener("click",function(){
+		song.src = lovegalore
+		song.play()
+		})
+	n2.addEventListener("click",function(){
+		song.src = dyingforyourlove
+		song.play()
+		})
+	e2.addEventListener("click", function(){
+		song.src = likeiwantyou
+		song.play()
+		})
+	s.addEventListener("click",function(){
+		song.src = loveagain
+		song.play()
+		})
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
